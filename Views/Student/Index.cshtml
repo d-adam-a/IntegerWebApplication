@@ -1,8 +1,12 @@
-﻿@model Student;
+﻿@model List<Student>;
 
 <p>Controller Student</p>
 
-<p>ID : @Model.Id</p>
-<p>Name : @Model.Name</p>
-<p>Address : @Model.Address</p>
-<p>Phone : @Model.Phone</p>
+@foreach(var data in Model)
+{
+    <p>ID : @data.Id</p>
+    <p>Name : @data.Name</p>
+    <p>Address : @data.Address</p>
+    <p>Phone : @data.Phone</p>
+    <hr />
+}
