@@ -7,6 +7,16 @@ namespace IntegerWebApplication.Controllers
     {
         public IActionResult Index()
         {
+            //Without List
+            /*var student = new Student()
+            {
+                Id = 1,
+                Name = "Dede",
+                Address = "Ciamis",
+                Phone = "082233824398"
+            };*/
+
+            //List
             var student = new List<Student>();
 
             student.Add(new Student()
@@ -24,6 +34,7 @@ namespace IntegerWebApplication.Controllers
                 Address = "Ciamis",
                 Phone = "082222222222"
             });
+
 
             return View(student);
         }
